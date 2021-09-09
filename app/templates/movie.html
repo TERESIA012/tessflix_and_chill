@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath"
             style="background: url({{movie.poster}}) no-repeat center center">
-           <img src="{{movie.poster}}" alt="" srcset=""> 
+            <img src="{{movie.poster}}" alt="" srcset="">
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
@@ -24,21 +24,22 @@
         </div>
     </div>
 
-</div>
-{% endblock %}
 
-<div class="row">
+    <div class="row">
 
-    <h1>Reviews</h1>
-    <hr>
+        <h1>Reviews</h1>
+        <hr>
 
-    {% if reviews %}
+        {% if reviews %}
         {{macro.displayReviews(reviews)}}
 
-    {% else%}
+        {% else%}
         <h3 class="text-center">This movie has no reviews </h3>
 
         <a class="btn btn-success btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
-    {% endif %}
+        {% endif %}
+
+    </div>
 
 </div>
+{% endblock %}
